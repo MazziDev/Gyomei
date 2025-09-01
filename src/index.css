@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Camadas personalizadas */
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-neutral-950 text-neutral-100; }
+}
+
+@layer components {
+  .container-responsive { @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8; }
+  .focus-ring { @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white; }
+}
+
+@layer utilities {
+  /* Textura suave em padrão pontilhado para fundos escuros */
+  .bg-noise {
+    background-image: radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px);
+    background-size: 3px 3px;
+  }
+  .glow-text { @apply relative; animation: glow 3.2s ease-in-out infinite alternate; }
+  .candle-flicker { animation: flicker 2.4s linear infinite; }
+}
+
+@keyframes glow {
+  0% { text-shadow: 0 0 6px rgba(255,255,255,0.2), 0 0 14px rgba(52,111,255,0.15); }
+  50% { text-shadow: 0 0 10px rgba(255,255,255,0.35), 0 0 22px rgba(52,111,255,0.28); }
+  100% { text-shadow: 0 0 14px rgba(255,255,255,0.45), 0 0 30px rgba(52,111,255,0.35); }
+}
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% { opacity: 1; }
+  20%, 24%, 55% { opacity: .55; }
+  23% { opacity: .35; }
+}
