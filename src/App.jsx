@@ -17,7 +17,8 @@ export default function App() {
 
   useEffect(() => {
     if (!audioRef.current) {
-      const audio = new Audio('/src/assets/music.mp3')
+      // Import dinâmico para bundler resolver caminho correto em produção (GitHub Pages base)
+      const audio = new Audio(new URL('./assets/music.mp3', import.meta.url).href)
       audio.loop = true
       audio.volume = volume
       audioRef.current = audio

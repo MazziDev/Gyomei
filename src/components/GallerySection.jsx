@@ -1,13 +1,18 @@
 import { motion } from 'framer-motion'
+import img1 from '../assets/gallery/1.jpg'
+import img2 from '../assets/gallery/2.jpg'
+import img3 from '../assets/gallery/3.jpg'
+import img4 from '../assets/gallery/4.jpg'
+import img5 from '../assets/gallery/5.jpg'
+import img6 from '../assets/gallery/6.jpg'
 
-// Ajuste os nomes conforme os arquivos adicionados em src/assets/gallery
 const images = [
-  { src: '/src/assets/gallery/1.jpg', alt: 'Fanart 1 de Gyomei' },
-  { src: '/src/assets/gallery/2.jpg', alt: 'Fanart 2 de Gyomei' },
-  { src: '/src/assets/gallery/3.jpg', alt: 'Fanart 3 de Gyomei' },
-  { src: '/src/assets/gallery/4.jpg', alt: 'Fanart 4 de Gyomei' },
-  { src: '/src/assets/gallery/5.jpg', alt: 'Fanart 5 de Gyomei' },
-  { src: '/src/assets/gallery/6.jpg', alt: 'Fanart 6 de Gyomei' },
+  { src: img1, alt: 'Fanart 1 de Gyomei' },
+  { src: img2, alt: 'Fanart 2 de Gyomei' },
+  { src: img3, alt: 'Fanart 3 de Gyomei' },
+  { src: img4, alt: 'Fanart 4 de Gyomei' },
+  { src: img5, alt: 'Fanart 5 de Gyomei' },
+  { src: img6, alt: 'Fanart 6 de Gyomei' },
 ]
 
 export function GallerySection() {

@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
+import heroImage from '../assets/gyomei-hero.png'
 
-export function HeroSection({ background = '/src/assets/gyomei-hero.png' }) {
+export function HeroSection({ background = heroImage }) {
   const handleScroll = (e) => {
     e.preventDefault()
   const target = document.getElementById('biography')
