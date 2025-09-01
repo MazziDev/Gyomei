@@ -40,15 +40,9 @@ Crie no GitHub (ex: `seu-usuario/gyomei_himejima`). Clone local e coloque estes 
 `vite.config.js` já está configurado com `base: '/Gyomei/'` para publicação em `https://MazziDev.github.io/Gyomei/`.
 
 ### 3. Workflow
-Arquivo `.github/workflows/deploy.yml` (Pages via Actions) já faz:
-1. Checkout
-2. Install
-3. Build (`npm run build`)
-4. Publica para Pages
+Workflow ativo: `.github/workflows/deploy-ghpages.yml` publica em branch `gh-pages` com build limpo (orphan). Ele copia somente `dist/` para a raiz do branch. Push na branch `main` dispara deploy.
 
-Push na branch `main` dispara deploy.
-
-Se o método Pages Actions falhar com 404, há fallback: `.github/workflows/deploy-ghpages.yml` publica em branch `gh-pages` usando `peaceiris/actions-gh-pages`. Nesse caso, em Settings → Pages selecione Source = Deploy from a branch → Branch: `gh-pages` / root.
+Configurar Pages: Settings → Pages → Source: Deploy from a branch → Branch: `gh-pages` / (root).
 
 ### 5. Ativar Pages
 Settings → Pages → Source = GitHub Actions (se não estiver automático). Primeiro deploy configura ambiente.
